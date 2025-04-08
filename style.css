@@ -1,66 +1,190 @@
 /* All Docs */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 
-p{
-    font-family: sans-serif;
-    color: black;
 }
 
-h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color: black;
-}
-h3 {
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-color: black;
-
-
-
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 ul {
     list-style: none;
 }
 
-header img {
+
+body {
+   padding-top: 90px;
+   background-color: rgb(255, 255, 240);
+}
+
+.quote {
+  
+  
+
+}
+
+.quote:hover {
+  cursor: pointer;
+  color: white;
+}
+
+
+
+
+/* Home-Index Page */
+
+
+.header {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.top-bar {
+background-color: rgb(80, 80, 80);
+
+}
+
+.top-bar_content {
+    max-width: 1200;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+align-items: center;
+justify-content: end;
+column-gap: 20px;
+
+}
+
+.icon {
+margin-right: 3px;
+
+}
+
+.bottom-bar{
+background-color: gray;
+
+}
+
+.bottom-bar_content {
+    max-width: 1200;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 70px;
+   font-size: 14px;
+    display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
     height: 80px;
     margin-left: 40px;
 }
-body {
-    height: 125vh;
-    background-color: white;
-    background-size: cover;
-    margin-top: 80px;
-    padding: 20px;
+
+.nav {
+  transition: all 0.3s ease-in-out;
+ 
 }
 
-/* Home-Index Page */
-main {
-    color: white;
-}
-
-header {
-    background-color: gray;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
+.list {
     display: flex;
-    align-items: center;
-    z-index: 1;
+    column-gap: 40px;
 }
 
-header * {
-    display: inline;
+
+.nav-link {
+color: white;
+transition: all 0.02s;
 }
 
-header li {
-    margin: 20px;
+.nav-link:hover {
+color: black;
 }
 
-header li a {
-    color: black;
-    text-decoration: none;
+.hamburger {
+display: none;
+cursor: pointer;
+}
+
+.bar {
+height: 2px;
+width: 27px;
+background-color: gray;
+margin: 5px 0;
+opacity: 0.8;
+transition: all 0.3s ease-in-out;
+}
+
+/*Java script for Hamburger*/
+.nav--open {
+  transform: translateX(0%) !important;
+}
+
+.hamburger--open .bar:nth:-child(1) {
+  transform: translate(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth:-child(2) {
+opacity: 0;
+}
+
+.hamburger--open .bar:nth:-child(3) {
+  transform: translate(-7px) rotate(-45deg);
+}
+
+/*fix this responsive thing for nav dev when resized*/
+@media (max-width: 650px ) {
+
+    .nav {
+        position: fixed;
+        top: 110px;
+        left: 0;
+        background-color: gray;
+        width: 100%;
+    padding: 10px 0 25px;
+    transform: translateX(-100%); 
+
+    }
+
+    .list {
+        flex-direction:column ;
+        align-items: center;
+        row-gap: 20px;
+
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .bar {
+      height: 2px;
+      width: 27px;
+      background-color: white;
+      margin: 5px 0;
+      opacity: 0.8;
+    }
+
+
+}
+
+/*end of nav*/
+
+.intro-title {
+  margin-top: 80px;
+  padding: 40px;
+
 }
 
 
@@ -76,7 +200,7 @@ flex-direction: center;
 .product{
     display: flex;
     justify-content: center;
-    
+    column-gap: 5px;
 
     
 }
@@ -100,140 +224,236 @@ flex-direction: center;
    
 
 
-
+/*slideshow starts */
 
   .slider {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    }
-    
-    .slider img {
-    width: 50%;
-        display: none;
-        margin-left: auto;
-        margin-right: auto;
-    
-    }
-    
-    img.displayslide{
-        display: block;
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
 
-
-.slider button {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-font-size: 2rem;
-padding: 10px 15px;
-background-color: black;
-color: white;
-border: none;
-cursor: pointer;
-
-
-}
-
-.previous {
-    left: 0;
-}
-
-.next{
-right: 0;
-
-}
-
-@keyframes fade {
-    from {opacity: .5;}
-to {opacity: 1;}
-}
-
-
-/*Start of Marektplace */
-
-
-
-
-.Suppliers h1 {
-    font-size: larger;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-
-}
-
-
-
-.Marketplace-container {
-    position: relative;
-    left: 150px;
-    width: 50%;
-
-   
-}
-
-.Marketplace-container img {
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-}
-
-
-.Marketplace-container .btn {
-    position: relative;
-    left: 300px;
-    bottom: 300px;
-    background-color: red;
-    border-radius: 25px;
-    color: black;
-   text-decoration: none;
-    font-size: large;
-    height: 50px;
-    width: 200px;
-    cursor: pointer;
-    text-align: center;
   }
 
-  .Footer {
-    bottom: 0px;
-  position:relative;
-  height:50px;
-  left: 0px;
-  right:0px;
-  width: 100%;
-  margin-bottom:0px;
-  background-color: gray;
+.slides {
+
+}
+
+.slide {
+
+}
+
+
+
+
+/*end of slideshow*/
+
+/* column writing */
+.writing-columns {
+align-items: center;
+    padding: 40px;
+    column-count: 3;
+column-gap: 40px;
+column-rule-style: solid;
+}
+
+
+/*FA Icons*/
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
+    
+    
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  
+  .fa-marketplace {
+      text-align: center;
+      margin-bottom: 10px;
+      column-gap: 5px;
+      
+    }
+    
+    .fa-sociallinks {
   text-align: center;
+margin-top: 5px;
+  margin-bottom: 10px;    
+  column-gap: 5px;
+
+}
+
+
+
+  /* Amazon*/
+  .fa-amazon {
+background: black;
+color: white;
+
   }
+/* Ebay*/
+.fa-ebay {
+    background: gray;
+    color: white
+}
+
+  /* Linkedin*/
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  /* Youtube */
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+/* Instagram*/
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+/*Maps*/
+
+.locate-us {
+text-align: center;
+font-size: 30px;
+margin-top: 40px ;
+
+
+}
+
+.maps {
+    text-align: center;
+}
+  
+  
+  /*footer*/
+  .footertop {
+  padding: 10px;
+  background-color: lightgray;
+  }
+
+.footertop-content {
+text-align: center;
+font-size: large;
+
+}
+
+.footerbottom {
+padding: 10px;
+    background-color: grey;
+}
+
+.footerbottom-content {
+    display: flex;
+}
+
 
 /* Contact Us PAge */
 .contact {
-    justify-content: center;
+  margin-top: 80px;  
+  text-align: center;
+    line-height: 50px;
+}
+
+.location-store {
+  text-align: center;
+  margin: auto;
+  padding-left: 500px;
+}
+
+.google-maps{
+    text-align: center;
+
 }
 
 /* Products */
 
+.cylinder-repair {
+  margin: auto;
+  margin-top: 80px;
+  width: 60%;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: gray;
+  
+  
+
+}
+
+.cylinder-repair_content {
+margin: auto;
+letter-spacing: 1px;
+
+}
+
+.hose-assembly {
+  margin: auto;
+  width: 60%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: gray;
+  
+}
+
+.hose-assembly_content {
+ margin: auto;
+ 
+}
+
+
+
+
 .products {
-    justify-content: center;
 
 }
 .products h1 {
  text-align: center;   
 justify-content: center;
 }
-/* Vidoes */
+
+.inventory-container {
+padding-left: 250px;
+  
+  
+}
+
+.inventory {
+  
+  
+
+}
+
+
+/* Vidoes page*/
+
+
+.video-page {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+.work-videos {
+  padding: 10px;
+  text-align: center;
+}
 
 
 
-
-
-
-
-
-
-
+.coming-soon {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  border: black solid;
+  background-color: yellow;
+}
 
 
 
