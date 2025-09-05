@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   
   <!DOCTYPE html>
@@ -35,70 +36,75 @@
           <title>Navigation bar</title>
       </head>
       <body>
-          <header class="header">
-  <div class="top-bar">
-    <div class="top-bar_content">
-      <section class="phone"><i class="fa-solid fa-phone icon"></i> 626-393-1438</section>
-      <section class="email"><i class="fa-solid fa-envelope icon"></i> hydraulicgaskets@sbcglobal.net</section>
-      <section class="location"><i class="fa-solid fa-location-dot icon"></i> 1944 Central Ave South El Monte, CA 91733</section>
-      <section class="time" id="time-section">
-        <i class="fa-solid fa-clock icon"></i>
-        <span class="current-hours">Monday–Friday: 8:30am–4:30pm</span>
-        <ul class="dropdown-menu-clock" id="hours-dropdown">
-          <li>Monday–Friday: 8:30am–4:30pm</li>
-          <li>Saturday: 8:30am–12:30pm</li>
-          <li>Sunday: Closed</li>
-        </ul>
-      </section>
-    </div>
-  </div>
-
- <div class="bottom-bar">
-        <div class="bottom-bar_content">
-<a href="/index.html">
-  <img src="/assets/Logo Transparent Background.png" alt="" class="logo">
-</a>
+           <header class="header">
+ <div class="top-bar">
+<div class="top-bar_content">
+<section class="phone">
+  <i class="fa-solid fa-phone"></i>
+  (626) 393-1438
+</section>
+<section class="email">
+  <i class="fa-solid fa-envelope"></i>
+  hydraulicgaskets@sbcglobal.net
+</section>
+<section class="address">
+  <i class="fa-solid fa-location-dot"></i>
+  1944 Central Ave South El Monte, CA 91733
+</section>
+<section class="hours">
+  <i class="fa-solid fa-clock fa-1x"></i>
+  Monday-Friday: 8:00am - 4:30pm / Sat: 8:00am-12:00pm
+</section>
+</div>
+</div>
+<!--Bottom Bar-->
+<div class="bottom-bar">
+  <div class="bottom-bar_content">
+    <a class="logo" href="">
+      <img src="/assets/Logo Transparent Background.png" alt="">
+    </a>
 <nav class="nav">
-  <ul class="list">
-    <li class="nav-item">
-      <a href="/index.html" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-      <a href="/main pages/services.html" class="nav-link">Services</a>
-<ul>
-  
+<ul class="nav_list">
+<li class="nav-item">
+  <a class="nav_link" href="/index.html">Home</a>
+</li>
+<li class="nav-item dropdown-parent">
+  <a class="nav_link" href="/main pages/services.html">Services</a>
+</li>
+<li class="nav-item dropdown-parent">
+  <a class="nav_link" href="/main pages/product.html">Products</a>
+ <ul class="dropdown-menu">
+<li><a class="dropdown-menu_link" href="/product-pages/hose.html">Hoses</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/tubing.html">Tubing</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/fittings-connectors.html">Fittings</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/seals.html">Seals</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/gasket-material.html">Gaskets</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/belts.html">Belts</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/oil-lubricant.html">Oil</a></li>
+<li><a class="dropdown-menu_link" href="/product-pages/clamp.html">Clamp</a></li>
+
+  </ul>
+</li>
+<li class="nav-item">
+  <a class="nav_link" href="/main pages/contact.html">Contact Us</a>
+</li>
+<li class="nav-item">
+  <a class="nav_link" href="/main pages/video.html">Videos</a>
+</li>
+<li class="nav-item">
+  <a class="quote" href="mailto:hydraulicgaskets@sbcglobal.net">Quote</a>
+</li>
 </ul>
-    </li>
-    <li class="nav-item dropdown-parent">
-      <a href="/main pages/product.html" class="nav-link">Products</a>
-      <ul class="dropdown-menu">
-        <li><a href="/product-pages/hose.html" class="dropdown-link">Hose</a></li>
-        <li><a href="/product-pages/tubing.html" class="dropdown-link">Tubing</a></li>
-        <li><a href="/product-pages/fittings-connectors.html" class="dropdown-link">Fittings & Connectors</a></li>
-        <li><a href="/product-pages/seals.html" class="dropdown-link">Seals</a></li>
-        <li><a href="/product-pages/gasket-material.html" class="dropdown-link">Gasket Material</a></li>
-        <li><a href="/product-pages/belts.html" class="dropdown-link">Belts</a></li>
-        <li><a href="/product-pages/oil-lubricant.html" class="dropdown-link">Oil & Lubricants</a></li>
-        <li><a href="/product-pages/clamp.html" class="dropdown-link">Clamps</a></li>
-      </ul>
-    <li class="nav-item">
-      <a href="/main pages/contact.html" class="nav-link">Contact Us</a>
-    </li>
-    <li class="nav-item">
-      <a href="/main pages/video.html" class="nav-link">Videos</a>
-    </li>
-    <li class="nav-item">
-      <a href="mailto:hydraulicgaskets@sbcglobal.net" class="btn-quote">Quote</a>
-    </li>
-</ul>
-      <div class="hamburger" id="hamburger" aria-label="Toggle menu" tabindex="0">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </div>
-  </div>
+</nav>
+
+<div class="hamburger ">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+
+</div>
+</div>
 </header>
        
          
@@ -184,82 +190,86 @@
 
 </div> <!--wrapper end-->
   
- <div class="footertop">
-    <div class="footertop-content">
-     <img class="suppliers" src="/assets/megadyne-group-logo-vector-removebg-preview.png" alt="">
-     <img class="suppliers" src="/assets/midlandindustries-removebg-preview.png" alt="">
-     <img class="suppliers" src="/assets/Brennan-e1584634506238-removebg-preview.png" alt="">
-  
-    </div>
-    </div>
+ <!--Footer-->
+<div class="footertop">
+  <div class="footertop-content">
+    <img class="suppliers" src="/assets/megadyne-group-logo-vector-removebg-preview.png" alt="Megadyne Group">
+    <img class="suppliers" src="/assets/midlandindustries-removebg-preview.png" alt="Midland Industries">
+    <img class="suppliers" src="/assets/Brennan-e1584634506238-removebg-preview.png" alt="Brennan">
+  </div>
+</div>
 
-   
-       
-        <div class="footerbottom">
-          <div class="footerbottom-content">
-
-<ul class="">
-<li style="text-decoration: underline; font-weight: bold;">Services</li>
-<li>Custom Hose Assembly</li>
-<li>Gaksets</li>
-<li>O-ring Cord vulcanization</li>
-<li>cylinder repair</li>
-</ul>
-
-
-<ul class="">
-<li style="text-decoration: underline; font-weight: bold;">Products</li>
-  <li>Hoses</li>
-<li>Gaskets</li>
-<li>Oil & Lubricant</li>
-<li>Seals</li>
-<li>Tubing</li>
-</ul>
-
-
-           <ul class="gen-info">
-<li style="text-decoration: underline; font-weight: bold;">Hydraulics & Gaskets</li>
-<li>1944 Central Ave,  <br>South El Monte, CA 91773</li>
-<li>Monday-Friday: 8:00am-4:30pm</li>
-<li>Saurday: 8:00am-12:00pm</li>
-
-           </ul>
-           
-            <ul class="">
-              <li style="text-decoration: underline; font-weight: bold;">Marketplace</li>
-              <li><a target="_blank" href="http://www.amazon.com/shops/hydraulicandgaskets" class="fa fa-amazon fa-1x"></a></li>
-            <li><a target="_blank" href="https://www.ebay.com/usr/hydraulicsgaskets" class="fa fa-ebay fa-2x"></a> </li>
-            </ul>
-          
-
-
-            <ul class="">
-            <li style="text-decoration: underline; font-weight: bold;">Socials</li>
-              <li><a target="_blank" href="https://www.instagram.com/hydraulicgaskets" class="fa fa-instagram fa-2x"></a></li>
-          <li><a target="_blank" href="https://youtube.com/@hydraulicsandgaskets?si=6dz6AntfaI1VFmAU" class="fa fa-youtube fa-2x"></a></li>
-          <li><a target="_blank" href="https://www.linkedin.com/company/hydraulicsandgaskets/" class="fa fa-linkedin fa-2x"></a></li> 
-          </ul>
+<div class="footerbottom">
+  <div class="footerbottom-content">
+    <ul>
+      <li class="footer-title">Menu</li>
+      <a href="/index.html">
+        <li>Home</li>
+      </a>
+      <a href="/main pages/services.html">
+        <li>Services</li>
+      </a>
+      <a href="/main pages/product.html">
+        <li>Products</li>
+      </a>
+      <a href="/main pages/contact.html">
+        <li>Contact Us</li>
+      </a>
+      <a href="/main pages/video.html">
+        <li>Videos</li>
+      </a>
+    </ul>
     
-          
-            <ul class="payment-type">
-              <li style="text-decoration: underline; font-weight: bold;">Payment Accepted</li>
-              <li><i class="fa-brands fa-3x fa-cc-visa"></i></li>
-              <li><i class="fa-brands fa-3x fa-cc-amex"></i></li>
-              <li><i class="fa-brands fa-3x fa-cc-discover"></i></li>
-              <li><i class="fa-brands fa-3x fa-cc-mastercard"></i></li>      
-            <li><i class="fa-brands fa-3x fa-apple-pay"></i></li>
-          <li><i class="fa-brands fa-3x fa-google-pay"></i></li> 
-          </ul>
-
-
-
+    <ul>
+      <li class="footer-title">Products</li>
+      <li>Hoses</li>
+      <li>Gaskets</li>
+      <li>Oil & Lubricant</li>
+      <li>Seals</li>
+      <li>Tubing</li>
+    </ul>
+    
+    <ul class="gen-info">
+      <li class="footer-title">Hydraulics & Gaskets</li>
+      <li>1944 Central Ave,<br>South El Monte, CA 91773</li>
+      <li>Monday-Friday: 8:00am-4:30pm</li>
+      <li>Saturday: 8:00am-12:00pm</li>
+      <li>(626)393-1438</li>
+      <li>hydraulicgaskets@sbcglobal.net</li>
+    </ul>
+    
+    <ul>
+      <li class="footer-title">Marketplace</li>
+      <li><a target="_blank" href="http://www.amazon.com/shops/hydraulicandgaskets" class="fa fa-amazon fa-1x"></a></li>
+      <li><a target="_blank" href="https://www.ebay.com/usr/hydraulicsgaskets" class="fa fa-ebay fa-2x"></a></li>
+    </ul>
+    
+    <ul>
+      <li class="footer-title">Socials</li>
+      <li><a target="_blank" href="https://www.instagram.com/hydraulicgaskets" class="fa fa-instagram fa-2x"></a></li>
+      <li><a target="_blank" href="https://youtube.com/@hydraulicsandgaskets?si=6dz6AntfaI1VFmAU" class="fa fa-youtube fa-2x"></a></li>
+      <li><a target="_blank" href="https://www.linkedin.com/company/hydraulicsandgaskets/" class="fa fa-linkedin fa-2x"></a></li>
+    </ul>
+    
+    <ul class="payment-type">
+      <li class="footer-title">Payment Accepted</li>
+      <li><i class="fa-brands fa-3x fa-cc-visa"></i></li>
+      <li><i class="fa-brands fa-3x fa-cc-amex"></i></li>
+      <li><i class="fa-brands fa-3x fa-cc-discover"></i></li>
+      <li><i class="fa-brands fa-3x fa-cc-mastercard"></i></li>
+      <li><i class="fa-brands fa-3x fa-apple-pay"></i></li>
+      <li><i class="fa-brands fa-3x fa-google-pay"></i></li>
+    </ul>
+  </div>
 </div>
+
+<div class="footerbottomend">
+  <div class="footerbottom-content_end">
+    <p>&copy; 2024 Hydraulics & Gaskets. All rights reserved.</p>
+  </div>  
 </div>
-      <div style="background-color:gray ;" class="footerbottomend">
-          <div class="footerbottom-content_end">
- <p style="text-align: center;">&copy; 2024 Hydraulics & Gaskets. All rights reserved.</p\>
-          </div>  
-          </div>
+
+
 
   </body>
 </html>   
