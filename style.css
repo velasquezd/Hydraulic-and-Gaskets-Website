@@ -775,45 +775,115 @@ row-gap: 20px;
 
 
 /* Contact Us PAge */
-
+/* Contact Info Box */
 .contact-box {
- 
-  display: flex;
-  justify-content: center;
+  background: #fff;
+  padding: 25px 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .contact-info {
-  text-align: left;
-  line-height: 20px;
- font-family: sans-serif;
- padding-left: 50px;
- 
-
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .contact-info li {
-  line-height: 50px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.location-title {
+.contact-info i {
+  color: #c8102e; /* red accent like your site */
+  min-width: 20px;
+}
+
+.contact-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Hours sublist */
+.hours-list {
+  list-style: none;
+  padding-left: 28px;
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Heading above map */
+.industry-header {
   text-align: center;
-  margin-top: 80px;
+  margin: 40px 0 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.location-store {
-  text-align: center;
-  margin: auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  width: auto;
-  height: 450px;
-  
+/* Map + Image wrapper */
+.location-web {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  justify-content: center;
 }
 
-.google-maps{
-    text-align: center;
-
+.location-web_maps,
+.location-web_image {
+  flex: 1 1 500px;
+  min-width: 300px;
 }
+
+.location-web iframe,
+.location-web img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 12px;
+  border: none;
+  object-fit: cover;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 20px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .industry-header {
+    font-size: 22px;
+  }
+
+  .location-web {
+    flex-direction: column;
+  }
+
+  .location-web_maps,
+  .location-web_image {
+    flex: 1 1 100%;
+  }
+
+  .location-web iframe,
+  .location-web img {
+    min-height: 280px;
+  }
+}
+
 
 /*Services */
 /* Section layout */
@@ -915,44 +985,49 @@ background-color: white;
 
 }
 
-.inventory-list_container {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+/* Product Page */
+.wrapper-page {
+  padding: 30px 20px;
 }
 
+.inventory-list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
 
 .inventory-item {
   background-color: white;
   font-family: sans-serif;
-  z-index: 10;
-}
-
-.inventory-item:hover {
-  transform: scale(1.03); /* subtle grow */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* soft black shadow */
-
-}
-
-.inventory-item img {
-  width: 250px;
-  height: auto;
-}
-
-.inventory-item hr {
-  width: 95%;
-  margin: auto;
-}
-
-.inventory-item h3 {
-text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease
 }
 
 
+/*Video Page*/
 
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto; 
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px; 
+}
 
-
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
 
 .video-page {
