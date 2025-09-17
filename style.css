@@ -951,42 +951,56 @@ background-color: white;
 
 .wrapper-page {
   padding: 30px 20px 30px 20px;
-
-
 }
 
 .inventory-list_container {
-  padding-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 5px;
+  flex-wrap: wrap;              /* wrap to new rows */
+  justify-content: center;      /* keep everything centered */
+  gap: 20px;                    /* even spacing */
 }
-
 
 .inventory-item {
   background-color: white;
   font-family: sans-serif;
-  z-index: 10;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 1 1 250px;              /* flexible width, min ~250px */
+  max-width: 300px;             /* don’t stretch too wide */
+  padding: 15px;
 }
 
 .inventory-item:hover {
-  transform: scale(1.03); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); 
-
+  transform: scale(1.05); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .inventory-item img {
-  width: 250px;
+  width: 100%;
   height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  display: block;
 }
 
 .inventory-item hr {
-  width: 95%;
-  margin: auto;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .inventory-item h3 {
-text-align: center;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .inventory-item {
+    flex: 1 1 100%;  /* full width */
+    max-width: 100%;
+  }
 }
 
 
